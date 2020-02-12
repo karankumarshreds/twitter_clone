@@ -4,13 +4,16 @@
 
 
 	{%for posts in posts%}
-		<div class="jumbotron jumbotron-fluid mt-5 py-2">
-  			<div class="container">
-    		<h1 class="display-4"><a href=".">{{posts.author}}</a></h1>
-    		<p class="lead">{{posts.content}}</p>
- 		 	</div>
-		</div>
-
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">{{ posts.author }}</a>
+		      <small class="text-muted">{{ posts.date }}</small>
+		    </div>
+		    <h2><a class="article-title" href="#">{{ posts.title }}</a></h2>
+		    <p class="article-content">{{ posts.content }}</p>
+		  </div>
+		</article>
 	{%endfor%}
 
 	
